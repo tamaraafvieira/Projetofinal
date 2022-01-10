@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kRT+uZz4quwlSgpilJbemYWt7M7ElHHwEXH3fMwslBKd1o8lh8CFTvOcGJ1lHv9XLQR8TSXWh//Z35ebC/aZ2g==",
+  "dgSpecHash": "TbOrdMwQCdZ4w0xgxTkWgWk6ikjtO8MHzWCrzGhI70TnYOaRNSzs4ObmCusaDM7+AVsW8vnRqJgUZUMdofgj+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
+  "projectFilePath": "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\BlackCode\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\izaqu\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
     "C:\\Users\\izaqu\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",

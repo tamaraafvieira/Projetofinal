@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj": {}
+    "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\BlackCode\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj": {
+    "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\BlackCode\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
+        "projectUniqueName": "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\BlackCode\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
         "projectName": "ProjetoFinal",
-        "projectPath": "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
+        "projectPath": "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\BlackCode\\ProjetoFinal\\ProjetoFinal\\ProjetoFinal.csproj",
         "packagesPath": "C:\\Users\\izaqu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\ProjetoFinal\\ProjetoFinal\\obj\\",
+        "outputPath": "C:\\Users\\izaqu\\OneDrive\\Área de Trabalho\\BlackCode\\ProjetoFinal\\ProjetoFinal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

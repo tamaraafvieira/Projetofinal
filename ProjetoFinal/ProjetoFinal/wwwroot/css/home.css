@@ -21,6 +21,9 @@
 /*Inicio da criacao de classes reutilizaveis*/
 
 /*texto*/
+body {
+    background-color: var(--cor-principal);
+}
 .titulo-principal {
     font-size: max(25px, 2.5vw);
     font-family: 'Source Code Pro', 'monospace';
