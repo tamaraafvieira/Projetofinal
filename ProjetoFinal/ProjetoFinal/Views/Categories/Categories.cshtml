@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="container-fluid">
+    <div id="areas" class="pb-5">
+        <section class="row d-flex justify-content-center">
+            <div class="col-lg-12 d-flex justify-content-center my-2">
+                <h1 class="titulo-principal cor-secundaria-texto my-5">
+                    <strong>TALENTOS | CATEGORIAS</strong>
+                </h1>
+            </div>
+        </section>
+
+        <div class="container">
+            <form id="areas_talentos" asp-controller="Talentos" asp-action="ShowTalents">
+                <label for="area"></label>
+                <div class="card-container">
+                    @foreach(Categories info in ViewBag.info){
+
+                    <div class="form-group areas-card" style="display: flex; justify-content: center;">
+                        <input name="area" type="radio" value="@info.Area" id="@info.Id"/>@info.Name
+                    </div>
+
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

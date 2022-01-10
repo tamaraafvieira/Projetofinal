@@ -1,0 +1,171 @@
+﻿@model ProjetoFinal.Models.Talento
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container-fluid">
+    <div class="container cor-terciaria">
+                 <section class="row d-flex justify-content-center cor-terciaria">
+                <div class="col-lg-12 d-flex justify-content-center my-2">
+                    <h1 class="titulo-materias my-5">
+                        <strong>//EDIT</strong>
+                    </h1>
+                </div>
+            </section>
+        <h4>Talento</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label">QUAL O SEU NOME?</label>
+                        <input asp-for="Nome" id="Nome" type="text" placeholder="Digite seu nome completo" class="form-control input-md mb-4">
+                        <span asp-validation-for="Nome" class="text-danger"></span>                                
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Imagem" class="control-label">Anexo</label><br>
+                        <input asp-for="Imagem" type="file" id="anexo" class="mb-4 form-control" accept="image/*"/><br>
+                        <span asp-validation-for="Imagem" class="text-danger"></span>                        
+                    </div>   
+                    <div class="form-group">
+                        <label asp-for="Profissao" class="control-label" for="">QUAL A SUA PROFISSÁO / NO QUE VOCÊ TRABALHA?</label>
+                        <select asp-for="Profissao" name="profissao" class="custom-select mb-4">
+                            <option selected value="">Escolha uma Profissão</option>
+                            <option value="Artificial Inteligence">Artificial Inteligence</option>
+                            <option value="Business Intelligence">Business Inteligence</option>
+                            <option value="Cloud Computing">Cloud Computing</option>
+                            <option value="Computer Programming">Computer Programming</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Devops">Devops</option>
+                            <option value="Information Security">Information Secury</option>
+                            <option value="IoT">IoT</option>
+                        </select>
+                        <span asp-validation-for="Profissao" class="text-danger"></span>                        
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Localidade" class="control-label">QUAL A SUA LOCALIDADE?</label>
+                        <input asp-for="Localidade" id="localidade" type="text" placeholder="Digite a sua cidade/estado" class="form-control input-md mb-4">
+                        <span asp-validation-for="Localidade" class="text-danger"></span>                       
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Telefone">QUAL O SEU TELEFONE?</label>
+                        <input id="telefone" asp-for="Telefone" type="text" placeholder="Digite o seu telefone" class="form-control input-md mb-4">
+                        <span asp-validation-for="Telefone" class="text-danger"></span>                        
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Email">QUAL O SEU E-MAIL?</label>
+                        <input id="email" asp-for="Email" type="email" placeholder="Digite o seu email" class="form-control input-md mb-4">
+                        <span asp-validation-for="Email" class="text-danger"></span>                       
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Formacao" class="control-label">QUAL A SUA FORMAÇÃO?</label><br>
+                        <select asp-for="Formacao" class="custom-select mb-4">
+                            <option selected value="">Escolha o seu nível de formação</option>
+                            <option value="ensino fundamental incompleto">Ensino fundamental incompleto</option>
+                            <option value="Ensino fundamental completo">Ensino fundamental completo</option>
+                            <option value="ensino medio incompleto">Ensino médio incompleto</option>
+                            <option value="Ensino medio completo">Ensino médio completo</option>
+                            <option value="Ensino tecnico incompleto">Ensino técnico incompleto</option>
+                            <option value="Ensino tecnico completo">Ensino técnico completo</option>
+                            <option value="Ensino superior incompleto">Ensino superior incompleto</option>
+                            <option value="Ensino superio completo">Ensino superio completo</option>
+                        </select>
+                        <span asp-validation-for="Formacao" class="text-danger"></span>                        
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label titulo-principal" asp-for="Sobre">SOBRE:</label><br>
+                        <textarea class="text-area-cadastro mb-4" id="Formacao" asp-for="Sobre" maxlength="280" placeholder="Queremos te conhecer, fale um pouco mais sobre vc(280 caracteres)..."></textarea>
+                        <span asp-validation-for="Sobre" class="text-danger"></span>
+                    </div>
+                    <h1 class="titulo-secundario my-3">EXPERIÊNCIA</h1>
+                    <div class="form-group"> 
+                        <label class="control-label" asp-for="Local1">LOCAL?</label>
+                        <input id="local" asp-for="Local1" type="text" placeholder="Digite qual era o local" class="form-control input-md mb-4">
+                        <span asp-validation-for="Local1" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Funcao1">FUNÇÃO?</label>
+                        <input id="funcao" asp-for="Funcao1" type="text" placeholder="Digite a sua cidade/estado" class="form-control input-md mb-4">
+                        <span asp-validation-for="Funcao1" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Atividade1">ATIVIDADES?</label>
+                        <input id="atividade" asp-for="Atividade1" type="text" placeholder="Digite o seu telefone" class="form-control input-md mb-4">
+                        <span asp-validation-for="Atividade1" class="text-danger"></span>
+                    </div>
+                    <p class="borda-cadastro">.</p>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Local2">LOCAL?</label>
+                        <input id="local" asp-for="Local2" type="text" placeholder="Digite qual era o local" class="form-control input-md mb-4">
+                        <span asp-validation-for="Local2" class="text-danger"></span>
+                    </div>
+                    <p class="borda-cadastro">.</p>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Local2">LOCAL?</label>
+                        <input id="local" asp-for="Local2" type="text" placeholder="Digite qual era o local" class="form-control input-md mb-4">
+                        <span asp-validation-for="Local2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Funcao2">FUNÇÃO?</label>
+                        <input id="funcao" asp-for="Funcao2" type="text" placeholder="Digite a sua cidade/estado" class="form-control input-md mb-4">
+                        <span asp-validation-for="Funcao2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Atividade2">ATIVIDADES?</label>
+                        <input id="atividade" asp-for="Atividade2" type="text" placeholder="Digite o seu telefone" class="form-control input-md mb-4">
+                        <span asp-validation-for="Atividade2" class="text-danger"></span>
+                    </div>
+                    <h1 class="titulo-secundario my-5">CURSOS</h1>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Instituicao1">INSTITUIÇÃO?</label>
+                        <input id="instituicao" asp-for="Instituicao1" type="text" placeholder="Digite o nome da instituição formadora" class="form-control input-md mb-4">
+                        <span asp-validation-for="Instituicao1" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="CargaHoraria1">CARGA HORÁRIA?</label>
+                        <input id="cargaHoraria" asp-for="CargaHoraria1" type="text" placeholder="Digite a carga horária" class="form-control input-md mb-4">
+                        <span asp-validation-for="CargaHoraria1" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Aprendeu2">O QUE APRENDEU?</label>
+                        <textarea class="text-area-cadastro mb-4" asp-for="Aprendeu1" id="oQueAprendeu" name="textarea" maxlength="280" placeholder="Queremos te conhecer, fale um pouco mais sobre o que aprendeu..."></textarea>
+                        <span asp-validation-for="Aprendeu2" class="text-danger"></span>
+                    </div>
+                    <p class="borda-cadastro">.</p>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Instituicao2">INSTITUIÇÃO?</label>
+                        <input id="instituicao" asp-for="Instituicao2" type="text" placeholder="Digite o nome da instituição formadora" class="form-control input-md mb-4">
+                        <span asp-validation-for="Instituicao2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="CargaHoraria2">CARGA HORÁRIA?</label>
+                        <input id="cargaHoraria" asp-for="CargaHoraria2" type="text" placeholder="Digite a carga horária" class="form-control input-md mb-4">
+                        <span asp-validation-for="CargaHoraria2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Aprendeu2">O QUE APRENDEU?</label>
+                        <textarea class="text-area-cadastro mb-4" asp-for="Aprendeu2" id="oQueAprendeu" name="textarea" maxlength="280" placeholder="Queremos te conhecer, fale um pouco mais sobre o que aprendeu..."></textarea>
+                        <span asp-validation-for="Aprendeu2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" asp-for="Habilidades">HABILIDADES:</label><br>
+                        <textarea class="text-area-cadastro mb-4" asp-for="Habilidades" id="habilidades" maxlength="280" placeholder="Exemplo: Html; Css; Javascript; Bootstrap; "></textarea>
+                        <span asp-validation-for="Habilidades" class="text-danger"></span>
+                    </div>       
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+    </div>
+</div>

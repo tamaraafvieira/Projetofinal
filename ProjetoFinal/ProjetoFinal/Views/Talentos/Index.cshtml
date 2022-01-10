@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ProjetoFinal.Models.Talento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container-fluid">
+    <section class="row d-flex justify-content-center cor-terciaria">
+            <div class="col-lg-12 d-flex justify-content-center my-2">
+                <h1 class="titulo-materias my-5">
+                    <strong>//INDEX</strong>
+                </h1>
+            </div>
+    </section>
+    <div class="container">
+        <table class="table cor-terciaria">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Localidade)
+                    </th>
+            
+                    <th>
+                        @Html.DisplayNameFor(model => model.Profissao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefone)
+                    </th>            
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count<Talento>() == 0)
+                {
+                    <tr><td colspan="11" class="bg-info text-center h3">Banco vazio</td></tr>
+                }
+                else { 
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Localidade)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Profissao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Telefone)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>    

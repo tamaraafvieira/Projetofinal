@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BCB</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+    <link rel="stylesheet" href="~/css/materias.css" />
+    <link rel="stylesheet" href="~/css/header_footer.css" />
+    <link rel="stylesheet" href="~/css/cadastrar.css" />
+    <link rel="stylesheet" href="~/css/info.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<body>
+    <header class="cor-fundo-header-footer">
+        <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-dark box-shadow cor-fundo-header-footer">
+            <div class="container-fluid link-header-footer">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="logo-header" src="~/img/logo/logo-completa.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-md-inline-flex flex-md-row-reverse">
+                    <ul class="navbar-nav flex-grow-1 ">
+                        <li class="nav-item texto-header">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"><span class="cor-secundaria-texto hover-link">Home</span></a>
+                        </li>
+                        <li>
+                            <div class="dropdown hover-link">
+                                <button id="botao-menu" type="button" class="btn btn-link cor-secundaria-texto texto-header hover-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
+                                    Conteúdos
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #C4C4C4;">
+                                    <a class="nav-link hover-link" asp-area="" asp-controller="Conteudos" asp-action="Materias">Matérias</a>
+                                    <a class="nav-link hover-link" asp-area="" asp-controller="Conteudos" asp-action="Podcasts">Podcasts</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item texto-header hover-link">
+                            <a class="nav-link" asp-area="" asp-controller="Contratar" asp-action="Index"><span class="cor-secundaria-texto hover-link">Contratar</span></a>
+                        </li>
+                        <li class="nav-item texto-header hover-link">
+                            <a class="nav-link" asp-area="" asp-controller="Categories" asp-action="Categories"><span class="cor-secundaria-texto hover-link">Talentos</span></a>
+                        </li>
+                        <li class="nav-item texto-header hover-link">
+                            <a class="nav-link" asp-area="" asp-controller="Talentos" asp-action="Create"><span class="cor-secundaria-texto hover-link">Cadastre-se</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div><!--class="container"-->
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <footer id="foot" class="footer text-muted" style="margin-bottom: -10%; border-top: 2px solid #FFD79C;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 my-2 cor-secundaria-texto d-lg-flex flex-lg-column align-items-lg-center">
+                    <h3 class="titulo-terciario mt-3 ml-2 ml-lg-5 pt-5">Links Rápidos</h3>
+                    <ul class="texto-terciario link-header-footer">
+                        <li>
+                            <a class="nav-link hover-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li>
+                            <div class="btn-group dropright hover-link">
+                                <button type="button" class="btn btn-link cor-secundaria-texto texto-terciario hover-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
+                                    Conteúdos
+                                </button>
+                                <div class="dropdown-menu" style="background-color: #C4C4C4;">
+                                    <a class="nav-link hover-link" asp-area="" asp-controller="Conteudos" asp-action="Materias">Matérias</a>
+                                    <a class="nav-link hover-link" asp-area="" asp-controller="Conteudos" asp-action="Podcasts">Podcasts</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="nav-link hover-link" asp-area="" asp-controller="Contratar" asp-action="Index">Contratar</a>
+                        </li>
+                        <li>
+                            <a class="nav-link hover-link" asp-area="" asp-controller="Categories" asp-action="Categories">Talentos</a>
+                        </li>
+                        <li>
+                            <a class="nav-link hover-link" asp-area="" asp-controller="Talentos" asp-action="Create">Cadastre-se</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-sm-12 col-md-6 col-lg-6 my-2 cor-secundaria-texto d-lg-flex flex-lg-column align-items-lg-center">
+                    <h3 class="mx-3 titulo-terciario pt-5">Redes Sociais</h3>
+                    <ul class="texto-terciario link-header-footer ml-3">
+                        <li class="hover-link mt-4 mt-sm-3 mt-md-0 mt-lg-2 fab fa-github-square">
+                            <a href="" target="_blank" class="hover-link texto-terciario" style="text-decoration: none;">&nbspGitHub do Projeto</a>
+                        </li><br>
+                        <li class="my-2 hover-link fab fa-facebook-square">
+                            <span class="texto-terciario">&nbspFacebook</span>
+                        </li><br>
+                        <li class="mb-3 hover-link fab fa-twitter-square">
+                            <span class="texto-terciario">&nbspTwitter</span>
+                        </li><br>
+                        <li class="mb-3 hover-link fab fa-instagram">
+                            <span class="texto-terciario">&nbspInstagram</span>
+                        </li><br>
+                        <li class="hover-link fab fa-linkedin">
+                            <span class="texto-terciario">&nbspLinkedin</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="borda-footer">.</p>
+
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mt-3">
+                    <img src="~/img/logo/logo-completa.png" class="logo-header" alt="">
+                </div>
+                <div class="col-12 d-flex justify-content-center texto-footer cor-secundaria">
+                    <p>&copy; 2022 - BLACK CODE BRASIl - sq58.recodepro@gmail.com</p>                     
+                </div>
+                <div class="col-12 d-flex justify-content-center texto-footer cor-secundaria">
+                   <a class="nav-link hover-link" asp-area="" asp-controller="Talentos" asp-action="Index">Administrador</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ProjetoFinal.Models.Talento>
+
+<div id="talentos">
+    <div class="container">
+        <h1 class="text-center">//@ViewData["Categoria"]</h1>
+
+        <div class="talentos-place mt-5">
+            @foreach (Talento item in Model)
+            {
+                <a asp-action="Details" asp-route-id="@item.Id">
+                    <div class="card">
+                        <figure>
+                            <img class="card-img-top align-items-center mt-2" src="~/img/userImage/@item.ImagemNome" alt="Card image cap">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Nome</h5>
+                            <p class="card-text">@item.Sobre</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">@item.Profissao</li>
+                            <li class="list-group-item">@item.Email</li>
+                            <li class="list-group-item">@item.Telefone</li>
+                        </ul>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+﻿@model ProjetoFinal.Models.Talento
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div id="talento-info">
+    <div class="row info-header">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-5">
+            <div class="container dados img my-4 ml-md-4 d-flex justify-content-center">
+                <img src="~/img/userImage/@Model.ImagemNome" alt="Imagem de perfil">
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+            <div class="container my-4 d-flex flex-column justify-content-center align-items-center
+            d-lg-flex flex-lg-column justify-content-lg-center align-items-lg-start
+            d-md-flex flex-md-column justify-content-md-center align-items-md-start ml-md-5">
+                <h2 class="titulo-info cor-secundaria mt-lg-5 mt-md-5">@Html.DisplayFor(model => model.Nome)</h2>
+                <div class=" cor-secundaria  ">
+                    <span class="destaque-info">Profissão:</span><span class="texto-info "> @Html.DisplayFor(model => model.Profissao)</span><br>
+                    <span class="destaque-info">Local:</span><span class="texto-info">&nbsp&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Localidade)</span><br>
+                    <span class="destaque-info">Telefone:</span><span class="texto-info">&nbsp @Html.DisplayFor(model => model.Telefone)</span><br>
+                    <span class="destaque-info">E-mail:</span><span class="texto-info">&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Email)</span><br>
+                    <span class="destaque-info">Formação:</span><span class="texto-info">&nbsp @Html.DisplayFor(model => model.Formacao)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row cor-principal contratar">
+        <div class="container my-5">
+            <div class="col-12">
+                <h1 class="titulo-principal">SOBRE</h1>
+            </div>
+            <div class="col-12">
+                <p class="text-terciario text-justify">
+                    @Html.DisplayFor(model => model.Sobre)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row experiencia">
+        <div class="container mt-5">
+            <div class="col-12">
+                <h1 class="titulo-principal">EXPERIÊNCIAS</h1><br>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 pb-5 " style="margin-left: 3%;">
+                    <span class="texto-secundario">LOCAL:</span><span class="text-terciario ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Local1) </span><br><br>
+                    <span class="texto-secundario">FUNÇÃO:</span><span class="text-terciario ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Funcao1) </span><br><br>
+                    <span class="texto-secundario">ATIVIDADES:</span><span class="text-terciario ">&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Atividade1) </span><br>
+                    <p style="color: #FFD79C;" class="borda pb-5">.</p>
+                </div>
+
+                <div class="col-12 text-terciario pb-5 " style="margin-left: 3%;">
+                    <span class="texto-secundario">LOCAL:</span><span class="text-terciario ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Local2)  </span><br><br>
+                    <span class="texto-secundario">FUNÇÃO:</span><span class="text-terciario ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Funcao2) </span><br><br>
+                    <span class="texto-secundario">ATIVIDADES:</span><span class="text-terciario ">&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Atividade2) </span><br>
+                    <p style="color: #FFD79C;" class="borda pb-5">.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row curso">
+        <div class="container mt-5">
+            <div class="col-12">
+                <h1 class="titulo-principal">CURSOS</h1><br>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 pb-5 " style="margin-left: 3%;">
+                    <span class="texto-secundario">INSTITUIÇÃO:</span><span class="text-terciario ">&nbsp&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Instituicao1) </span><br><br>
+                    <span class="texto-secundario">CARGA HORÁRIA:</span><span class="text-terciario ">&nbsp&nbsp  @Html.DisplayFor(model => model.CargaHoraria1) h</span><br><br>
+                    <span class="texto-secundario">O QUE APRENDEU:</span><span class="text-terciario text-justify">
+                        &nbsp @Html.DisplayFor(model => model.Aprendeu1)
+                    </span><br>
+                    <p style="color: rgba(174, 241, 255, 1);" class="borda pb-5">.</p>
+                </div>
+
+                <div class="col-12 text-terciario pb-5 " style="margin-left: 3%;">
+                    <span class="texto-secundario">INSTITUIÇÃO:</span><span class="text-terciario ">&nbsp&nbsp&nbsp&nbsp @Html.DisplayFor(model => model.Instituicao2)</span><br><br>
+                    <span class="texto-secundario">CARGA HORÁRIA:</span><span class="text-terciario ">&nbsp&nbsp @Html.DisplayFor(model => model.CargaHoraria2) h</span><br><br>
+                    <span class="texto-secundario">O QUE APRENDEU:</span><span class="text-terciario text-justify">
+                        &nbsp @Html.DisplayFor(model => model.Aprendeu2) </P>
+                    </span><br>
+                    <p style="color: rgba(174, 241, 255, 1);" class="borda pb-5">.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row cor-principal contratar">
+        <div class="container my-5">
+            <div class="col-12">
+                <h1 class="titulo-principal">HABILIDADES</h1>
+            </div>
+            <div class="col-12">
+                <ul class="text-terciario ml-4 ">
+                    @{string[] listaHabilidade = Model.Habilidades.Split(";");}
+
+                    @foreach (var habilidade in listaHabilidade)
+                    {
+                        <li>@habilidade</li>
+                    }
+                    <!--<li>Comunicação</li>
+    <li>Proatividade</li>
+    <li> Organização</li>
+    <li> Computação</li>
+    <li>Foco em resultados</li>
+    <li>Liderança</li>
+    <li>Entusiasmo</li>
+    <li>Flexibilidade e capacidade de se adaptar a mudanças</li>
+    <li>Criatividade</li>
+    <li>Capacidade de trabalhar remotamente</li>
+    <li>Capacidade de inovação</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <style type="text/css">
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+
+</div>
